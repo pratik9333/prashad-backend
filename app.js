@@ -15,6 +15,10 @@ var allowCrossDomain = function (req, res, next) {
 
 app.use(allowCrossDomain);
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 // route included
 app.use("/payment", require("./routes/payment"));
 
